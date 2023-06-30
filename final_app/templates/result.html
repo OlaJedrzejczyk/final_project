@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+
+
+{% block page_title %}
+  Podcast Generator
+{% endblock %}
+
+
+{% block content %}
+<br>
+
+{% if message %}
+    <p>{{ message }}</p>
+{% else %}
+    {% for podcast in podcasts %}
+
+    <h3>{{ podcast.author }}</h3>
+    <h5><b>{{ podcast.name }}</b></h5>
+    <img src="{{ podcast.image }}" alt="Podcast Image">
+    <p class="py-1"><i>{{ podcast.summary }}</i></p>
+    <a href="{{ podcast.id }}" class="btn btn-dark" role ="button">Go to: {{ podcast.name }} <b>&rarr;</b></a>
+    <hr class="my-4">
+    {% endfor %}
+{% endif %}
+
+{% endblock %}

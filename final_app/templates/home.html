@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+
+
+{% block page_title %}
+  Podcast Generator
+{% endblock %}
+
+
+{% block content %}
+
+    <p> The Podcast Generator is an application created and developing by a team of four individuals,
+        aimed at helping users select podcasts based on their personal preferences and interests.
+        This user-friendly application streamlines the process of finding the perfect podcast from a vast collection of categories.
+    </p>
+
+    <p> With the Podcast Generator, discovering your next favorite podcast is a breeze.
+        The application features a form that allows users to customize their podcast preferences,
+        on based genres. By selecting specific one of the category , users can narrow down their search and
+        receive tailored recommendations that align with their interests.
+    </p><br>
+
+    <nav class="click1">
+      <a href="{% url 'form' %}" role ="button">Click to choose your Podcast!</a><br><br>
+    </nav>
+
+    <a href="https://apps.apple.com/pl/app/podcasty/id525463029?l=pl">
+      <img src="{% static 'images/itune-logo.png' %}" alt="iTunes Logo">
+    </a>
+
+    <a href="https://www.apple.com/">
+        <img src="{% static 'images/apple-logo.png' %}" alt="Apple Logo"> </a>
+        <br><br>
+
+    <p>The Podcast Generator exclusively chooses podcasts available on the <b> Apple Podcasts</b>. Once users input their preferences,
+        the Podcast Generator generates a curated list of podcast recommendations, featuring both popular shows and other otherwise go unnoticed.
+        Each recommendation is accompanied by a brief description, giving users insight into the podcast's content,
+        format, and host. Users can then listen to the recommended episodes directly within the Apple
+        Podcasts app or access them through their preferred podcast platform.</p>
+
+    <p class="text-end">
+        <i>Whether you're seeking educational content, thought-provoking discussions,
+        captivating storytelling, or light-hearted entertainment,
+        the Podcast Generator is your go-to application for discovering and enjoying podcasts tailored to your interests.
+        Say goodbye to endless scrolling and uncertainty, and let the Podcast Generator guide you to the perfect podcast
+        for your next listening experience. </i>
+    </p>
+
+{% endblock %}
+
+

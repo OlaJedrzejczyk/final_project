@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+
+{% block page_title %}
+  Podcast Generator
+{% endblock %}
+
+{% block content %}
+
+    <form method="post" action="{% url 'form' %}">
+    {% csrf_token %}
+        <div class="list1">
+            <nav class="form1">
+                <h4>Choose your favourite podcast genre:</h4>
+            </nav>
+                <ul>
+                {% for genre in genres %}
+                    <li>
+                      <input type="radio" name="genre" value="{{ genre }}" id="{{ genre }}">
+                      <label for="{{ genre }}">{{ genre }}</label>
+                {% endfor %}
+                    </li>
+                </ul>
+                  <button class="button1" type="submit">Confirm</button>
+        </div>
+</form>
+
+{% endblock %}

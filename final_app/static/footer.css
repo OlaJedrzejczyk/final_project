@@ -1,0 +1,10 @@
+footer {
+  background-color: #41C5D4;
+  padding: 20px;
+  clear: both;
+  height: 50px;
+}
+
+footer a {
+  text-decoration: none;
+}

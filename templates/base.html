@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block page_title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <link rel="stylesheet" href="{% static 'header.css' %}">
+  <link rel="stylesheet" href="{% static 'footer.css' %}">
+  <link rel="stylesheet" href="{% static 'logging.css' %}">
+  {% block css_files %}{% endblock %}
+
+</head>
+<body>
+    <nav class="main-container">
+      <header>
+        <nav class="buttons">
+            <div class="link-home-container">
+                <a class="link-home" href="{% url 'home' %}">Podcast Generator</a>
+            </div>
+                <div class="login1">
+                  {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}" class="button-name" >{{ user.username }}</a>
+                    <a href="{% url 'signout' %}" class="button-signout">Log out</a>
+                  {% else %}
+                    <div class="login2">
+                        <a href="{% url 'signin' %}" class="button-signin">Log in</a>
+                        <a href="{% url 'signup' %}" class="button-signup">Register</a>
+                    </div>
+                  {% endif %}
+            </div>
+        </nav>
+
+      </header>
+
+      {% block content %}{% endblock %}
+    </nav>
+
+  <footer >
+    <span class="text-light">Authors</span>
+        <a href="https://github.com/t-wojciechowski">
+          @t-wojciechowski
+        </a>
+        <a href="https://github.com/PiotrKaminski21">
+          @PiotrKaminski21
+        </a>
+        <a href="https://github.com/OlaJedrzejczyk">
+          @OlaJedrzejczyk
+        </a>
+        <a href="https://github.com/TomaszDrobnik" class="text-light">
+          @TomaszDrobnik
+        </a>
+        <p>Podcast Generator. © 2023 All Rights Reserved</p>
+  </footer>
+  {% block footer %}{% endblock %}
+
+</body>
+</html>

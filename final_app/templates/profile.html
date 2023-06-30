@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+
+
+{% block page_title %}
+  {{ user.username }}
+{% endblock %}
+
+
+{% block content %}
+  <h3>Profile details:</h3>
+  <p>Username: {{ user.username }}</p>
+  <p>First name: {{ user.first_name }}</p>
+  <p>Last name: {{ user.last_name }}</p>
+  <p>Email: {{ user.email }}</p>
+{% endblock %}
