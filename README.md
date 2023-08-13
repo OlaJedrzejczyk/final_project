@@ -27,4 +27,22 @@ How it's working ?
 
 ![image](https://github.com/OlaJedrzejczyk/final_project/assets/118756898/59af337f-736f-4e3c-988c-0f607ca960df)
 
+## Table of contents
+-General info: Created webapp at podcast generator in 40 h during the course, to pass the SDA Academy python course. The aim of the project was to practise creating a project in Django, team working working in agile scrum methodology.
+
+-Technologies: Django, Python, Github, Bootstrap,
+
+-Project status: In progress
+
+-Features: Choose your favourite podcast genre and dive into listening
+
+### How to run:
+Pull the repo, run in terminal command:
+
+"python manage.py makemigrations"
+
+"python manage.py migrate"
+
+"python manage.py runserver"
+
 
