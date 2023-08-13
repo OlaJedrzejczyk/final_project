@@ -44,5 +44,6 @@ Pull the repo, run in terminal command:
 "python manage.py migrate"
 
 "python manage.py runserver"
+####
 
-
+Authors : Tomasz Wojciechowski https://github.com/t-wojciechowski Ola Jędrzejczyk https://github.com/OlaJedrzejczyk Piotr Kamiński https://github.com/PiotrKaminski21 Tomasz Drobnik
