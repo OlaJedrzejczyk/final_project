@@ -45,5 +45,5 @@ Pull the repo, run in terminal command:
 
 "python manage.py runserver"
 
-####
-Authors: Tomasz Drobnik, Aleksandra Jędrzejczyk https://github.com/OlaJedrzejczyk, Piotr Kamiński https://github.com/PiotrKaminski21, Tomasz Wojciechowski https://github.com/t-wojciechowski
+#### Authors
+Tomasz Drobnik, Aleksandra Jędrzejczyk https://github.com/OlaJedrzejczyk, Piotr Kamiński https://github.com/PiotrKaminski21, Tomasz Wojciechowski https://github.com/t-wojciechowski
